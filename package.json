@@ -1,0 +1,43 @@
+{
+  "name": "nodejs-llama",
+  "version": "1.0.0",
+  "description": "Electron app with llama.cpp integration via Node.js addon",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "npm run copy-dylibs && electron .",
+    "build:llama": "cd llama.cpp && mkdir -p build && cd build && cmake .. && cmake --build . --config Release",
+    "build:addon": "cd src/addon && node-gyp rebuild",
+    "build": "npm run build:llama && npm run build:addon",
+    "postinstall": "electron-builder install-app-deps",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "copy-dylibs": "node scripts/copy-dylibs.js"
+  },
+  "keywords": ["electron", "llama.cpp", "node-addon"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.9.1",
+    "node-addon-api": "^7.1.0",
+    "node-gyp": "^10.0.1"
+  },
+  "build": {
+    "appId": "com.electron.nodejs-llama",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "files": [
+      "src/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "llama.cpp/models",
+        "to": "models",
+        "filter": ["*.bin"]
+      }
+    ]
+  }
+}

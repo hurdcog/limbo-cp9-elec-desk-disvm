@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Llama.cpp Electron App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Llama.cpp Prompt Processor</h1>
+    
+    <div class="model-section">
+      <h2>Model</h2>
+      <div class="input-group">
+        <input type="text" id="model-path" placeholder="Path to model file" readonly>
+        <button id="select-model-btn">Select Model</button>
+      </div>
+      <div id="model-info" class="info-text"></div>
+    </div>
+    
+    <div class="prompt-section">
+      <h2>Prompt</h2>
+      <textarea id="prompt-input" placeholder="Enter your prompt here..."></textarea>
+      <div class="controls">
+        <button id="process-btn" disabled>Process Prompt</button>
+      </div>
+    </div>
+    
+    <div class="result-section">
+      <h2>Result</h2>
+      <div id="result-display" class="result-area">
+        <div id="result-text">Select a model and enter a prompt to begin.</div>
+        <div id="loading-indicator" class="hidden">
+          <div class="spinner"></div>
+          <div>Processing...</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="status-bar">
+      <div id="status">Ready</div>
+    </div>
+  </div>
+  
+  <script src="renderer.js"></script>
+</body>
+</html> 

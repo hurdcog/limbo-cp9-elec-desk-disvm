@@ -1,0 +1,1 @@
+cmd_Release/llama_addon.node := c++ -bundle -Wl,-rpath,@loader_path -undefined dynamic_lookup -Wl,-search_paths_first -mmacosx-version-min=10.15 -arch arm64 -L./Release -stdlib=libc++  -o Release/llama_addon.node Release/obj.target/llama_addon/llama_addon.o -L/Users/temme/nodejs-llama/src/addon/../../llama.cpp/build/bin -lllama -lggml

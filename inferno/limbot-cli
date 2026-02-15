@@ -1,0 +1,75 @@
+#!/bin/sh
+# Limbot - AI Chat Assistant CLI wrapper script
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+INFERNO_ROOT="${INFERNO_ROOT:-/usr/inferno}"
+LIMBOT_DIS="/dis/limbot.dis"
+
+# Colors
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+NC='\033[0m'
+
+log() {
+    echo "${GREEN}[limbot]${NC} $1"
+}
+
+error() {
+    echo "${RED}[ERROR]${NC} $1" >&2
+}
+
+# Check if Inferno is available
+if [ ! -d "$INFERNO_ROOT" ]; then
+    error "Inferno OS not found at $INFERNO_ROOT"
+    error "Please install Inferno OS or set INFERNO_ROOT environment variable"
+    exit 1
+fi
+
+# Find Inferno emulator
+EMU=""
+if [ -x "$INFERNO_ROOT/Linux/386/bin/emu" ]; then
+    EMU="$INFERNO_ROOT/Linux/386/bin/emu"
+elif [ -x "$INFERNO_ROOT/emu" ]; then
+    EMU="$INFERNO_ROOT/emu"
+else
+    error "Inferno emulator not found"
+    exit 1
+fi
+
+# Check if limbot.dis exists
+if [ ! -f "$LIMBOT_DIS" ] && [ ! -f "$SCRIPT_DIR/limbot.dis" ]; then
+    log "Limbot not compiled, compiling now..."
+    cd "$SCRIPT_DIR"
+    
+    if [ -x "$EMU" ]; then
+        $EMU sh -c "limbo -o limbot.dis limbot.b" || {
+            error "Failed to compile limbot.b"
+            exit 1
+        }
+        log "Compilation complete"
+    else
+        error "Cannot compile: emulator not available"
+        exit 1
+    fi
+fi
+
+# Run limbot with arguments
+if [ $# -eq 0 ]; then
+    # Interactive mode (no arguments)
+    log "Starting Limbot in interactive mode..."
+    $EMU sh -c "run /dis/limbot.dis"
+else
+    # Check for help flag
+    if [ "$1" = "-h" ] || [ "$1" = "--help" ] || [ "$1" = "help" ]; then
+        $EMU sh -c "run /dis/limbot.dis -h"
+    elif [ "$1" = "-i" ] || [ "$1" = "--interactive" ]; then
+        # Explicit interactive mode
+        $EMU sh -c "run /dis/limbot.dis -i"
+    else
+        # One-shot mode with prompt
+        $EMU sh -c "run /dis/limbot.dis $*"
+    fi
+fi

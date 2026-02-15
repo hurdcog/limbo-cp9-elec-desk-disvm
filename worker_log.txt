@@ -1,0 +1,643 @@
+
+
+2025-05-16 05:17:58 - ==== New Session Started ====
+
+2025-05-16 05:17:58 - Initializing llama_addon module
+2025-05-16 05:18:15 - GetWorkerLog function called
+2025-05-16 05:18:15 - ProcessPrompt function called
+2025-05-16 05:18:15 - Creating LlamaWorker with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:18:15 - LlamaWorker constructor called with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:18:15 - LlamaWorker queued for execution
+2025-05-16 05:18:15 - Worker thread started execution
+2025-05-16 05:18:15 - Model path: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:18:15 - Prompt length: 5 characters
+2025-05-16 05:18:15 - Prompt content: hello
+2025-05-16 05:18:15 - Step 1: Initializing llama.cpp backend
+2025-05-16 05:18:15 - Step 2: Loading model from /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:18:16 - GetWorkerLog function called
+2025-05-16 05:18:16 - Model loaded successfully:
+2025-05-16 05:18:16 -   - Model type: LLaMA architecture
+2025-05-16 05:18:16 -   - Parameters: 7B
+2025-05-16 05:18:16 -   - Context size: 2048 tokens
+2025-05-16 05:18:16 -   - Vocabulary size: 32000 tokens
+2025-05-16 05:18:16 - Step 3: Creating inference context
+2025-05-16 05:18:16 - Context created with 4 threads for computation
+2025-05-16 05:18:16 - Step 4: Tokenizing prompt
+2025-05-16 05:18:16 - Tokenized prompt into 5 tokens
+2025-05-16 05:18:16 - Step 5: Processing prompt tokens
+2025-05-16 05:18:17 - Prompt processing complete - generating response
+2025-05-16 05:18:17 - Step 6: Generating response tokens
+2025-05-16 05:18:17 - Generated token 1/42: 'who'
+2025-05-16 05:18:17 - GetWorkerLog function called
+2025-05-16 05:18:17 - Generated token 6/42: 'its'
+2025-05-16 05:18:18 - Generated token 11/42: 'up'
+2025-05-16 05:18:18 - GetWorkerLog function called
+2025-05-16 05:18:18 - Generated token 16/42: 'out'
+2025-05-16 05:18:19 - Generated token 21/42: 'do'
+2025-05-16 05:18:19 - GetWorkerLog function called
+2025-05-16 05:18:19 - Generated token 26/42: 'out'
+2025-05-16 05:18:20 - GetWorkerLog function called
+2025-05-16 05:18:20 - Generated token 31/42: 'how'
+2025-05-16 05:18:20 - Generated token 36/42: 'back'
+2025-05-16 05:18:21 - GetWorkerLog function called
+2025-05-16 05:18:21 - Generated token 41/42: 'will'
+2025-05-16 05:18:21 - Generated token 42/42: 'back'
+2025-05-16 05:18:21 - Step 7: Response generation complete, cleaning up resources
+2025-05-16 05:18:21 - Final response length: 179 characters
+2025-05-16 05:18:21 - Worker processing completed successfully
+2025-05-16 05:18:21 - Worker execution completed
+2025-05-16 05:18:21 - OnOK called - returning result to JavaScript
+2025-05-16 05:18:21 - LlamaWorker destructor called
+2025-05-16 05:18:40 - GetWorkerLog function called
+2025-05-16 05:18:40 - ProcessPrompt function called
+2025-05-16 05:18:40 - Creating LlamaWorker with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:18:40 - LlamaWorker constructor called with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:18:40 - LlamaWorker queued for execution
+2025-05-16 05:18:40 - Worker thread started execution
+2025-05-16 05:18:40 - Model path: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:18:40 - Prompt length: 29 characters
+2025-05-16 05:18:40 - Prompt content: give me a name for my pet dog
+2025-05-16 05:18:40 - Step 1: Initializing llama.cpp backend
+2025-05-16 05:18:40 - Step 2: Loading model from /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:18:41 - GetWorkerLog function called
+2025-05-16 05:18:41 - Model loaded successfully:
+2025-05-16 05:18:41 -   - Model type: LLaMA architecture
+2025-05-16 05:18:41 -   - Parameters: 7B
+2025-05-16 05:18:41 -   - Context size: 2048 tokens
+2025-05-16 05:18:41 -   - Vocabulary size: 32000 tokens
+2025-05-16 05:18:41 - Step 3: Creating inference context
+2025-05-16 05:18:41 - Context created with 4 threads for computation
+2025-05-16 05:18:41 - Step 4: Tokenizing prompt
+2025-05-16 05:18:41 - Tokenized prompt into 7 tokens
+2025-05-16 05:18:41 - Step 5: Processing prompt tokens
+2025-05-16 05:18:42 - Prompt processing complete - generating response
+2025-05-16 05:18:42 - Step 6: Generating response tokens
+2025-05-16 05:18:42 - Generated token 1/31: 'take'
+2025-05-16 05:18:42 - GetWorkerLog function called
+2025-05-16 05:18:42 - Generated token 6/31: 'him'
+2025-05-16 05:18:43 - Generated token 11/31: 'of'
+2025-05-16 05:18:43 - GetWorkerLog function called
+2025-05-16 05:18:43 - Generated token 16/31: 'then'
+2025-05-16 05:18:44 - GetWorkerLog function called
+2025-05-16 05:18:44 - Generated token 21/31: 'could'
+2025-05-16 05:18:44 - Generated token 26/31: 'no'
+2025-05-16 05:18:45 - GetWorkerLog function called
+2025-05-16 05:18:45 - Generated token 31/31: 'give'
+2025-05-16 05:18:45 - Step 7: Response generation complete, cleaning up resources
+2025-05-16 05:18:45 - Final response length: 164 characters
+2025-05-16 05:18:45 - Worker processing completed successfully
+2025-05-16 05:18:45 - Worker execution completed
+2025-05-16 05:18:45 - OnOK called - returning result to JavaScript
+2025-05-16 05:18:45 - LlamaWorker destructor called
+2025-05-16 05:18:55 - GetWorkerLog function called
+2025-05-16 05:18:55 - ProcessPrompt function called
+2025-05-16 05:18:55 - Creating LlamaWorker with model: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:18:55 - LlamaWorker constructor called with model: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:18:55 - LlamaWorker queued for execution
+2025-05-16 05:18:55 - Worker thread started execution
+2025-05-16 05:18:55 - Model path: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:18:55 - Prompt length: 29 characters
+2025-05-16 05:18:55 - Prompt content: give me a name for my pet dog
+2025-05-16 05:18:55 - Step 1: Initializing llama.cpp backend
+2025-05-16 05:18:56 - Step 2: Loading model from /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:18:56 - GetWorkerLog function called
+2025-05-16 05:18:57 - Model loaded successfully:
+2025-05-16 05:18:57 -   - Model type: LLaMA architecture
+2025-05-16 05:18:57 -   - Parameters: 7B
+2025-05-16 05:18:57 -   - Context size: 2048 tokens
+2025-05-16 05:18:57 -   - Vocabulary size: 32000 tokens
+2025-05-16 05:18:57 - Step 3: Creating inference context
+2025-05-16 05:18:57 - Context created with 4 threads for computation
+2025-05-16 05:18:57 - Step 4: Tokenizing prompt
+2025-05-16 05:18:57 - Tokenized prompt into 7 tokens
+2025-05-16 05:18:57 - Step 5: Processing prompt tokens
+2025-05-16 05:18:57 - Prompt processing complete - generating response
+2025-05-16 05:18:57 - Step 6: Generating response tokens
+2025-05-16 05:18:57 - Generated token 1/43: 'how'
+2025-05-16 05:18:57 - GetWorkerLog function called
+2025-05-16 05:18:58 - Generated token 6/43: 'other'
+2025-05-16 05:18:58 - Generated token 11/43: 'any'
+2025-05-16 05:18:58 - GetWorkerLog function called
+2025-05-16 05:18:59 - Generated token 16/43: 'have'
+2025-05-16 05:18:59 - GetWorkerLog function called
+2025-05-16 05:18:59 - Generated token 21/43: 'the'
+2025-05-16 05:19:00 - Generated token 26/43: 'there'
+2025-05-16 05:19:00 - GetWorkerLog function called
+2025-05-16 05:19:00 - Generated token 31/43: 'most'
+2025-05-16 05:19:01 - Generated token 36/43: 'would'
+2025-05-16 05:19:01 - GetWorkerLog function called
+2025-05-16 05:19:01 - Generated token 41/43: 'over'
+2025-05-16 05:19:02 - Generated token 43/43: 'say'
+2025-05-16 05:19:02 - Step 7: Response generation complete, cleaning up resources
+2025-05-16 05:19:02 - Final response length: 229 characters
+2025-05-16 05:19:02 - Worker processing completed successfully
+2025-05-16 05:19:02 - Worker execution completed
+2025-05-16 05:19:02 - OnOK called - returning result to JavaScript
+2025-05-16 05:19:02 - LlamaWorker destructor called
+
+
+2025-05-16 05:34:18 - ==== New Session Started ====
+
+2025-05-16 05:34:18 - Initializing llama_addon module
+2025-05-16 05:34:27 - GetWorkerLog function called
+2025-05-16 05:34:27 - ProcessPrompt function called
+2025-05-16 05:34:27 - Creating LlamaWorker with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:34:27 - LlamaWorker constructor called with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:34:27 - LlamaWorker queued for execution
+2025-05-16 05:34:27 - Worker thread started execution
+2025-05-16 05:34:27 - Model path: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:34:27 - Prompt length: 5 characters
+2025-05-16 05:34:27 - Prompt content: hello
+2025-05-16 05:34:27 - Initializing llama.cpp backend
+2025-05-16 05:34:27 - Step 1: Setting up model parameters
+2025-05-16 05:34:27 - Step 2: Loading model from /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:34:28 - GetWorkerLog function called
+2025-05-16 05:34:29 - Model loaded successfully:
+2025-05-16 05:34:29 -   - Parameters: 1235814432
+2025-05-16 05:34:29 -   - Context size: 131072
+2025-05-16 05:34:29 -   - Embedding size: 2048
+2025-05-16 05:34:29 - Step 3: Creating inference context
+2025-05-16 05:34:29 - GetWorkerLog function called
+2025-05-16 05:34:30 - GetWorkerLog function called
+2025-05-16 05:34:31 - GetWorkerLog function called
+2025-05-16 05:34:32 - GetWorkerLog function called
+2025-05-16 05:34:33 - GetWorkerLog function called
+2025-05-16 05:34:34 - GetWorkerLog function called
+2025-05-16 05:34:35 - GetWorkerLog function called
+2025-05-16 05:34:36 - GetWorkerLog function called
+2025-05-16 05:34:37 - GetWorkerLog function called
+2025-05-16 05:34:38 - GetWorkerLog function called
+2025-05-16 05:34:39 - GetWorkerLog function called
+2025-05-16 05:34:41 - GetWorkerLog function called
+2025-05-16 05:34:41 - GetWorkerLog function called
+2025-05-16 05:34:43 - GetWorkerLog function called
+2025-05-16 05:34:44 - GetWorkerLog function called
+2025-05-16 05:34:45 - Context created with 4 threads for computation
+2025-05-16 05:34:45 - Step 5: Tokenizing prompt
+2025-05-16 05:34:45 - Tokenized prompt into 2 tokens
+2025-05-16 05:34:45 - Step 6: Processing prompt tokens
+2025-05-16 05:34:45 - ERROR: Failed to decode prompt
+2025-05-16 05:34:45 - OnOK called - returning result to JavaScript
+2025-05-16 05:34:45 - LlamaWorker destructor called
+2025-05-16 05:34:45 - GetWorkerLog function called
+
+
+2025-05-16 05:36:50 - ==== New Session Started ====
+
+2025-05-16 05:36:50 - Initializing llama_addon module
+2025-05-16 05:36:57 - GetWorkerLog function called
+2025-05-16 05:36:57 - ProcessPrompt function called
+2025-05-16 05:36:57 - Creating LlamaWorker with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:36:57 - LlamaWorker constructor called with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:36:57 - LlamaWorker queued for execution
+2025-05-16 05:36:57 - Worker thread started execution
+2025-05-16 05:36:57 - Model path: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:36:57 - Prompt length: 5 characters
+2025-05-16 05:36:57 - Prompt content: hello
+2025-05-16 05:36:57 - Initializing llama.cpp backend
+2025-05-16 05:36:57 - Step 1: Setting up model parameters
+2025-05-16 05:36:57 - Step 2: Loading model from /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:36:58 - GetWorkerLog function called
+2025-05-16 05:36:59 - Model loaded successfully:
+2025-05-16 05:36:59 -   - Parameters: 1235814432
+2025-05-16 05:36:59 -   - Context size: 131072
+2025-05-16 05:36:59 -   - Embedding size: 2048
+2025-05-16 05:36:59 - Step 3: Creating inference context
+2025-05-16 05:36:59 - Context created with 4 threads for computation
+2025-05-16 05:36:59 - Step 5: Tokenizing prompt
+2025-05-16 05:36:59 - Tokenized prompt into 2 tokens
+2025-05-16 05:36:59 - Step 6: Processing prompt tokens
+2025-05-16 05:36:59 - ERROR: Failed to decode prompt
+2025-05-16 05:36:59 - OnOK called - returning result to JavaScript
+2025-05-16 05:36:59 - LlamaWorker destructor called
+
+
+2025-05-16 05:39:01 - ==== New Session Started ====
+
+2025-05-16 05:39:01 - Initializing llama_addon module
+2025-05-16 05:39:08 - GetWorkerLog function called
+2025-05-16 05:39:08 - ProcessPrompt function called
+2025-05-16 05:39:08 - Creating LlamaWorker with model: /Users/temme/Downloads/tinyllama-1.1b-chat-v1.0.Q4_K_S.gguf
+2025-05-16 05:39:08 - LlamaWorker constructor called with model: /Users/temme/Downloads/tinyllama-1.1b-chat-v1.0.Q4_K_S.gguf
+2025-05-16 05:39:08 - LlamaWorker queued for execution
+2025-05-16 05:39:08 - Worker thread started execution
+2025-05-16 05:39:08 - Model path: /Users/temme/Downloads/tinyllama-1.1b-chat-v1.0.Q4_K_S.gguf
+2025-05-16 05:39:08 - Prompt length: 5 characters
+2025-05-16 05:39:08 - Prompt content: hello
+2025-05-16 05:39:08 - Initializing llama.cpp backend
+2025-05-16 05:39:08 - Step 1: Setting up model parameters
+2025-05-16 05:39:08 - Step 2: Loading model from /Users/temme/Downloads/tinyllama-1.1b-chat-v1.0.Q4_K_S.gguf
+2025-05-16 05:39:08 - Model loaded successfully:
+2025-05-16 05:39:08 -   - Parameters: 1100048384
+2025-05-16 05:39:08 -   - Context size: 2048
+2025-05-16 05:39:08 -   - Embedding size: 2048
+2025-05-16 05:39:08 - Step 3: Creating inference context
+2025-05-16 05:39:09 - GetWorkerLog function called
+2025-05-16 05:39:10 - GetWorkerLog function called
+2025-05-16 05:39:11 - GetWorkerLog function called
+2025-05-16 05:39:12 - GetWorkerLog function called
+2025-05-16 05:39:13 - GetWorkerLog function called
+2025-05-16 05:39:14 - GetWorkerLog function called
+2025-05-16 05:39:15 - GetWorkerLog function called
+2025-05-16 05:39:16 - GetWorkerLog function called
+2025-05-16 05:39:17 - GetWorkerLog function called
+2025-05-16 05:39:18 - GetWorkerLog function called
+2025-05-16 05:39:19 - GetWorkerLog function called
+2025-05-16 05:39:20 - GetWorkerLog function called
+2025-05-16 05:39:20 - Context created with 4 threads for computation
+2025-05-16 05:39:20 - Step 5: Tokenizing prompt
+2025-05-16 05:39:20 - Tokenized prompt into 2 tokens
+2025-05-16 05:39:20 - Step 6: Processing prompt tokens
+2025-05-16 05:39:20 - Prompt processing complete - generating response
+2025-05-16 05:39:20 - Step 7: Generating response tokens
+2025-05-16 05:39:20 - Generated token 1/128: ' hello'
+2025-05-16 05:39:20 - Generated token 6/128: ' hello'
+2025-05-16 05:39:20 - Generated token 11/128: ' hello'
+2025-05-16 05:39:20 - Generated token 16/128: ' hello'
+2025-05-16 05:39:21 - Generated token 21/128: ' hello'
+2025-05-16 05:39:21 - Generated token 26/128: ' hello'
+2025-05-16 05:39:21 - Generated token 31/128: ' hello'
+2025-05-16 05:39:21 - Generated token 36/128: 'Hello'
+2025-05-16 05:39:21 - Generated token 41/128: ' hello'
+2025-05-16 05:39:21 - Generated token 46/128: ' hello'
+2025-05-16 05:39:21 - Generated token 51/128: ' hello'
+2025-05-16 05:39:21 - Generated token 56/128: ' hello'
+2025-05-16 05:39:21 - Generated token 61/128: ' hello'
+2025-05-16 05:39:21 - Generated token 66/128: ' hello'
+2025-05-16 05:39:21 - Generated token 71/128: ' hello'
+2025-05-16 05:39:21 - Generated token 76/128: ' hello'
+2025-05-16 05:39:21 - GetWorkerLog function called
+2025-05-16 05:39:21 - Generated token 81/128: ' hello'
+2025-05-16 05:39:21 - Generated token 86/128: ' hello'
+2025-05-16 05:39:21 - Generated token 91/128: ' hello'
+2025-05-16 05:39:21 - Generated token 96/128: ' hello'
+2025-05-16 05:39:21 - Generated token 101/128: ' hello'
+2025-05-16 05:39:21 - Generated token 106/128: ' hello'
+2025-05-16 05:39:21 - Generated token 111/128: ' hello'
+2025-05-16 05:39:21 - Generated token 116/128: ' hello'
+2025-05-16 05:39:21 - Generated token 121/128: ' hello'
+2025-05-16 05:39:21 - Generated token 126/128: ' hello'
+2025-05-16 05:39:21 - Generated token 128/128: ' hello'
+2025-05-16 05:39:21 - Step 8: Response generation complete, cleaning up resources
+2025-05-16 05:39:21 - Final response length: 767 characters
+2025-05-16 05:39:21 - Worker processing completed successfully
+2025-05-16 05:39:21 - Worker execution completed
+2025-05-16 05:39:21 - OnOK called - returning result to JavaScript
+2025-05-16 05:39:21 - LlamaWorker destructor called
+2025-05-16 05:39:30 - GetWorkerLog function called
+2025-05-16 05:39:30 - ProcessPrompt function called
+2025-05-16 05:39:30 - Creating LlamaWorker with model: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:30 - LlamaWorker constructor called with model: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:30 - LlamaWorker queued for execution
+2025-05-16 05:39:30 - Worker thread started execution
+2025-05-16 05:39:30 - Model path: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:30 - Prompt length: 5 characters
+2025-05-16 05:39:30 - Prompt content: hello
+2025-05-16 05:39:30 - Initializing llama.cpp backend
+2025-05-16 05:39:30 - Step 1: Setting up model parameters
+2025-05-16 05:39:30 - Step 2: Loading model from /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:31 - GetWorkerLog function called
+2025-05-16 05:39:31 - Model loaded successfully:
+2025-05-16 05:39:31 -   - Parameters: 596049920
+2025-05-16 05:39:31 -   - Context size: 40960
+2025-05-16 05:39:31 -   - Embedding size: 1024
+2025-05-16 05:39:31 - Step 3: Creating inference context
+2025-05-16 05:39:31 - Context created with 4 threads for computation
+2025-05-16 05:39:31 - Step 5: Tokenizing prompt
+2025-05-16 05:39:31 - Tokenized prompt into 1 tokens
+2025-05-16 05:39:31 - Step 6: Processing prompt tokens
+2025-05-16 05:39:31 - Prompt processing complete - generating response
+2025-05-16 05:39:31 - Step 7: Generating response tokens
+2025-05-16 05:39:31 - Generated token 1/128: '>
+'
+2025-05-16 05:39:32 - Generated token 6/128: '
+'
+2025-05-16 05:39:32 - Generated token 11/128: ' (
+'
+2025-05-16 05:39:32 - Generated token 16/128: '"'
+2025-05-16 05:39:32 - Generated token 21/128: ' main'
+2025-05-16 05:39:32 - Generated token 26/128: ' Example'
+2025-05-16 05:39:32 - Generated token 31/128: '("'
+2025-05-16 05:39:32 - Generated token 36/128: '1'
+2025-05-16 05:39:32 - Generated token 41/128: 'Hello'
+2025-05-16 05:39:32 - Generated token 46/128: '!")
+'
+2025-05-16 05:39:32 - Generated token 51/128: ','
+2025-05-16 05:39:32 - Generated token 56/128: '	fmt'
+2025-05-16 05:39:32 - Generated token 61/128: ' World'
+2025-05-16 05:39:32 - Generated token 66/128: '.Println'
+2025-05-16 05:39:32 - Generated token 71/128: ' '
+2025-05-16 05:39:32 - Generated token 76/128: ' main'
+2025-05-16 05:39:32 - Generated token 81/128: ' Example'
+2025-05-16 05:39:32 - Generated token 86/128: '("'
+2025-05-16 05:39:32 - Generated token 91/128: '1'
+2025-05-16 05:39:32 - GetWorkerLog function called
+2025-05-16 05:39:32 - Generated token 96/128: 'Hello'
+2025-05-16 05:39:32 - Generated token 101/128: '!")
+'
+2025-05-16 05:39:32 - Generated token 106/128: ','
+2025-05-16 05:39:32 - Generated token 111/128: '	fmt'
+2025-05-16 05:39:32 - Generated token 116/128: ' World'
+2025-05-16 05:39:32 - Generated token 121/128: '.Println'
+2025-05-16 05:39:32 - Generated token 126/128: ' '
+2025-05-16 05:39:32 - Generated token 128/128: '!")
+'
+2025-05-16 05:39:32 - Step 8: Response generation complete, cleaning up resources
+2025-05-16 05:39:32 - Final response length: 446 characters
+2025-05-16 05:39:32 - Worker processing completed successfully
+2025-05-16 05:39:32 - Worker execution completed
+2025-05-16 05:39:32 - OnOK called - returning result to JavaScript
+2025-05-16 05:39:32 - LlamaWorker destructor called
+2025-05-16 05:39:44 - GetWorkerLog function called
+2025-05-16 05:39:44 - ProcessPrompt function called
+2025-05-16 05:39:44 - Creating LlamaWorker with model: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:44 - LlamaWorker constructor called with model: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:44 - LlamaWorker queued for execution
+2025-05-16 05:39:44 - Worker thread started execution
+2025-05-16 05:39:44 - Model path: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:44 - Prompt length: 15 characters
+2025-05-16 05:39:44 - Prompt content: whats your name
+2025-05-16 05:39:44 - Initializing llama.cpp backend
+2025-05-16 05:39:44 - Step 1: Setting up model parameters
+2025-05-16 05:39:44 - Step 2: Loading model from /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:45 - Model loaded successfully:
+2025-05-16 05:39:45 -   - Parameters: 596049920
+2025-05-16 05:39:45 -   - Context size: 40960
+2025-05-16 05:39:45 -   - Embedding size: 1024
+2025-05-16 05:39:45 - Step 3: Creating inference context
+2025-05-16 05:39:45 - GetWorkerLog function called
+2025-05-16 05:39:45 - Context created with 4 threads for computation
+2025-05-16 05:39:45 - Step 5: Tokenizing prompt
+2025-05-16 05:39:45 - Tokenized prompt into 4 tokens
+2025-05-16 05:39:45 - Step 6: Processing prompt tokens
+2025-05-16 05:39:45 - Prompt processing complete - generating response
+2025-05-16 05:39:45 - Step 7: Generating response tokens
+2025-05-16 05:39:45 - Generated token 1/128: ' and'
+2025-05-16 05:39:45 - Generated token 6/128: '?'
+2025-05-16 05:39:45 - Generated token 16/128: ' is'
+2025-05-16 05:39:45 - Generated token 21/128: ' and'
+2025-05-16 05:39:45 - Generated token 26/128: ' animal'
+2025-05-16 05:39:45 - Generated token 31/128: ' your'
+2025-05-16 05:39:45 - Generated token 36/128: ' what'
+2025-05-16 05:39:45 - Generated token 41/128: '?'
+2025-05-16 05:39:45 - Generated token 51/128: ' is'
+2025-05-16 05:39:46 - Generated token 56/128: ' and'
+2025-05-16 05:39:46 - Generated token 61/128: ' number'
+2025-05-16 05:39:46 - Generated token 66/128: ' your'
+2025-05-16 05:39:46 - Generated token 71/128: ' what'
+2025-05-16 05:39:46 - Generated token 76/128: '?'
+2025-05-16 05:39:46 - Generated token 86/128: ' is'
+2025-05-16 05:39:46 - Generated token 91/128: ' and'
+2025-05-16 05:39:46 - Generated token 96/128: ' number'
+2025-05-16 05:39:46 - Generated token 101/128: ' your'
+2025-05-16 05:39:46 - Generated token 106/128: ' what'
+2025-05-16 05:39:46 - Generated token 111/128: '?'
+2025-05-16 05:39:46 - Generated token 121/128: ' is'
+2025-05-16 05:39:46 - GetWorkerLog function called
+2025-05-16 05:39:46 - Generated token 126/128: ' and'
+2025-05-16 05:39:46 - Generated token 128/128: ' is'
+2025-05-16 05:39:46 - Step 8: Response generation complete, cleaning up resources
+2025-05-16 05:39:46 - Final response length: 466 characters
+2025-05-16 05:39:46 - Worker processing completed successfully
+2025-05-16 05:39:46 - Worker execution completed
+2025-05-16 05:39:46 - OnOK called - returning result to JavaScript
+2025-05-16 05:39:46 - LlamaWorker destructor called
+2025-05-16 05:39:57 - GetWorkerLog function called
+2025-05-16 05:39:57 - ProcessPrompt function called
+2025-05-16 05:39:57 - Creating LlamaWorker with model: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:57 - LlamaWorker constructor called with model: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:57 - LlamaWorker queued for execution
+2025-05-16 05:39:57 - Worker thread started execution
+2025-05-16 05:39:57 - Model path: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:57 - Prompt length: 22 characters
+2025-05-16 05:39:57 - Prompt content: give me a name for dog
+2025-05-16 05:39:57 - Initializing llama.cpp backend
+2025-05-16 05:39:57 - Step 1: Setting up model parameters
+2025-05-16 05:39:57 - Step 2: Loading model from /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:39:58 - Model loaded successfully:
+2025-05-16 05:39:58 -   - Parameters: 596049920
+2025-05-16 05:39:58 -   - Context size: 40960
+2025-05-16 05:39:58 -   - Embedding size: 1024
+2025-05-16 05:39:58 - Step 3: Creating inference context
+2025-05-16 05:39:58 - GetWorkerLog function called
+2025-05-16 05:39:58 - Context created with 4 threads for computation
+2025-05-16 05:39:58 - Step 5: Tokenizing prompt
+2025-05-16 05:39:58 - Tokenized prompt into 6 tokens
+2025-05-16 05:39:58 - Step 6: Processing prompt tokens
+2025-05-16 05:39:58 - Prompt processing complete - generating response
+2025-05-16 05:39:58 - Step 7: Generating response tokens
+2025-05-16 05:39:58 - Generated token 1/128: '
+'
+2025-05-16 05:39:58 - Generated token 6/128: ' a'
+2025-05-16 05:39:58 - Generated token 11/128: ' need'
+2025-05-16 05:39:58 - Generated token 16/128: ' dog'
+2025-05-16 05:39:58 - Generated token 21/128: ' name'
+2025-05-16 05:39:58 - Generated token 26/128: 'I'
+2025-05-16 05:39:58 - Generated token 31/128: ' dog'
+2025-05-16 05:39:58 - Generated token 36/128: ' to'
+2025-05-16 05:39:58 - Generated token 41/128: '
+'
+2025-05-16 05:39:58 - Generated token 46/128: ' a'
+2025-05-16 05:39:58 - Generated token 51/128: ' need'
+2025-05-16 05:39:58 - Generated token 56/128: ' dog'
+2025-05-16 05:39:58 - Generated token 61/128: ' name'
+2025-05-16 05:39:58 - Generated token 66/128: 'I'
+2025-05-16 05:39:58 - Generated token 71/128: ' dog'
+2025-05-16 05:39:58 - Generated token 76/128: ' to'
+2025-05-16 05:39:58 - Generated token 81/128: '
+'
+2025-05-16 05:39:58 - Generated token 86/128: ' a'
+2025-05-16 05:39:58 - Generated token 91/128: ' need'
+2025-05-16 05:39:58 - Generated token 96/128: ' dog'
+2025-05-16 05:39:58 - Generated token 101/128: ' name'
+2025-05-16 05:39:59 - Generated token 106/128: 'I'
+2025-05-16 05:39:59 - Generated token 111/128: ' dog'
+2025-05-16 05:39:59 - Generated token 116/128: ' to'
+2025-05-16 05:39:59 - Generated token 121/128: '
+'
+2025-05-16 05:39:59 - Generated token 126/128: ' a'
+2025-05-16 05:39:59 - Generated token 128/128: ' dog'
+2025-05-16 05:39:59 - Step 8: Response generation complete, cleaning up resources
+2025-05-16 05:39:59 - Final response length: 422 characters
+2025-05-16 05:39:59 - Worker processing completed successfully
+2025-05-16 05:39:59 - Worker execution completed
+2025-05-16 05:39:59 - OnOK called - returning result to JavaScript
+2025-05-16 05:39:59 - LlamaWorker destructor called
+2025-05-16 05:39:59 - GetWorkerLog function called
+2025-05-16 05:40:14 - GetWorkerLog function called
+2025-05-16 05:40:14 - ProcessPrompt function called
+2025-05-16 05:40:14 - Creating LlamaWorker with model: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:40:14 - LlamaWorker constructor called with model: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:40:14 - LlamaWorker queued for execution
+2025-05-16 05:40:14 - Worker thread started execution
+2025-05-16 05:40:14 - Model path: /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:40:14 - Prompt length: 22 characters
+2025-05-16 05:40:14 - Prompt content: give me a name for cat
+2025-05-16 05:40:14 - Initializing llama.cpp backend
+2025-05-16 05:40:14 - Step 1: Setting up model parameters
+2025-05-16 05:40:14 - Step 2: Loading model from /Users/temme/Downloads/Qwen3-0.6B-Q4_K_S.gguf
+2025-05-16 05:40:15 - GetWorkerLog function called
+2025-05-16 05:40:15 - Model loaded successfully:
+2025-05-16 05:40:15 -   - Parameters: 596049920
+2025-05-16 05:40:15 -   - Context size: 40960
+2025-05-16 05:40:15 -   - Embedding size: 1024
+2025-05-16 05:40:15 - Step 3: Creating inference context
+2025-05-16 05:40:15 - Context created with 4 threads for computation
+2025-05-16 05:40:15 - Step 5: Tokenizing prompt
+2025-05-16 05:40:15 - Tokenized prompt into 6 tokens
+2025-05-16 05:40:15 - Step 6: Processing prompt tokens
+2025-05-16 05:40:15 - Prompt processing complete - generating response
+2025-05-16 05:40:15 - Step 7: Generating response tokens
+2025-05-16 05:40:15 - Generated token 1/128: '
+'
+2025-05-16 05:40:15 - Generated token 6/128: ','
+2025-05-16 05:40:15 - Generated token 11/128: ' cat'
+2025-05-16 05:40:15 - Generated token 16/128: ' cat'
+2025-05-16 05:40:16 - Generated token 21/128: ' cat'
+2025-05-16 05:40:16 - Generated token 26/128: ' cat'
+2025-05-16 05:40:16 - Generated token 31/128: ' cat'
+2025-05-16 05:40:16 - Generated token 36/128: ' cat'
+2025-05-16 05:40:16 - GetWorkerLog function called
+2025-05-16 05:40:16 - Generated token 41/128: ' cat'
+2025-05-16 05:40:16 - Generated token 46/128: ' cat'
+2025-05-16 05:40:16 - Generated token 51/128: ' cat'
+2025-05-16 05:40:16 - Generated token 56/128: ' cat'
+2025-05-16 05:40:16 - Generated token 61/128: ' cat'
+2025-05-16 05:40:16 - Generated token 66/128: ' cat'
+2025-05-16 05:40:16 - Generated token 71/128: ' cat'
+2025-05-16 05:40:16 - Generated token 76/128: ' cat'
+2025-05-16 05:40:16 - Generated token 81/128: ' cat'
+2025-05-16 05:40:16 - Generated token 86/128: ' cat'
+2025-05-16 05:40:17 - Generated token 91/128: ' cat'
+2025-05-16 05:40:17 - Generated token 96/128: ' cat'
+2025-05-16 05:40:17 - Generated token 101/128: ' cat'
+2025-05-16 05:40:17 - Generated token 106/128: ' cat'
+2025-05-16 05:40:17 - GetWorkerLog function called
+2025-05-16 05:40:17 - Generated token 111/128: ' cat'
+2025-05-16 05:40:17 - Generated token 116/128: ' cat'
+2025-05-16 05:40:17 - Generated token 121/128: ' cat'
+2025-05-16 05:40:17 - Generated token 126/128: ' cat'
+2025-05-16 05:40:17 - Generated token 128/128: ' I'
+2025-05-16 05:40:17 - Step 8: Response generation complete, cleaning up resources
+2025-05-16 05:40:17 - Final response length: 328 characters
+2025-05-16 05:40:17 - Worker processing completed successfully
+2025-05-16 05:40:17 - Worker execution completed
+2025-05-16 05:40:17 - OnOK called - returning result to JavaScript
+2025-05-16 05:40:17 - LlamaWorker destructor called
+2025-05-16 05:41:11 - GetWorkerLog function called
+2025-05-16 05:41:11 - ProcessPrompt function called
+2025-05-16 05:41:11 - Creating LlamaWorker with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:41:11 - LlamaWorker constructor called with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:41:11 - LlamaWorker queued for execution
+2025-05-16 05:41:11 - Worker thread started execution
+2025-05-16 05:41:11 - Model path: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:41:11 - Prompt length: 22 characters
+2025-05-16 05:41:11 - Prompt content: give me a name for cat
+2025-05-16 05:41:11 - Initializing llama.cpp backend
+2025-05-16 05:41:11 - Step 1: Setting up model parameters
+2025-05-16 05:41:11 - Step 2: Loading model from /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:41:12 - GetWorkerLog function called
+2025-05-16 05:41:13 - Model loaded successfully:
+2025-05-16 05:41:13 -   - Parameters: 1235814432
+2025-05-16 05:41:13 -   - Context size: 131072
+2025-05-16 05:41:13 -   - Embedding size: 2048
+2025-05-16 05:41:13 - Step 3: Creating inference context
+2025-05-16 05:41:13 - GetWorkerLog function called
+2025-05-16 05:41:13 - Context created with 4 threads for computation
+2025-05-16 05:41:13 - Step 5: Tokenizing prompt
+2025-05-16 05:41:13 - Tokenized prompt into 7 tokens
+2025-05-16 05:41:13 - Step 6: Processing prompt tokens
+2025-05-16 05:41:14 - Prompt processing complete - generating response
+2025-05-16 05:41:14 - Step 7: Generating response tokens
+2025-05-16 05:41:14 - Generated token 1/128: '
+'
+2025-05-16 05:41:14 - Generated token 6/128: ' a'
+2025-05-16 05:41:14 - Generated token 11/128: ' are'
+2025-05-16 05:41:14 - Generated token 16/128: ' or'
+2025-05-16 05:41:14 - Generated token 21/128: ' a'
+2025-05-16 05:41:14 - Generated token 26/128: ' by'
+2025-05-16 05:41:14 - Generated token 31/128: ' such'
+2025-05-16 05:41:14 - Generated token 36/128: '
+'
+2025-05-16 05:41:14 - Generated token 41/128: ' Myth'
+2025-05-16 05:41:14 - Generated token 46/128: '
+'
+2025-05-16 05:41:14 - Generated token 51/128: ' Movies'
+2025-05-16 05:41:14 - Generated token 56/128: '*'
+2025-05-16 05:41:14 - Generated token 61/128: '.
+
+'
+2025-05-16 05:41:14 - Generated token 66/128: ' one'
+2025-05-16 05:41:14 - Generated token 71/128: ' if'
+2025-05-16 05:41:14 - Generated token 76/128: ' theme'
+2025-05-16 05:41:14 - Generated token 81/128: ','
+2025-05-16 05:41:14 - Generated token 86/128: ' what'
+2025-05-16 05:41:14 - GetWorkerLog function called
+2025-05-16 05:41:14 - Generated token 91/128: ' are'
+2025-05-16 05:41:14 - Generated token 96/128: ' name'
+2025-05-16 05:41:14 - Generated token 101/128: ' Is'
+2025-05-16 05:41:14 - Generated token 106/128: ' elegant'
+2025-05-16 05:41:14 - Generated token 111/128: ' and'
+2025-05-16 05:41:15 - Generated token 116/128: ' do'
+2025-05-16 05:41:15 - Generated token 121/128: ' length'
+2025-05-16 05:41:15 - Generated token 126/128: ' name'
+2025-05-16 05:41:15 - Generated token 128/128: ' Do'
+2025-05-16 05:41:15 - Step 8: Response generation complete, cleaning up resources
+2025-05-16 05:41:15 - Final response length: 455 characters
+2025-05-16 05:41:15 - Worker processing completed successfully
+2025-05-16 05:41:15 - Worker execution completed
+2025-05-16 05:41:15 - OnOK called - returning result to JavaScript
+2025-05-16 05:41:15 - LlamaWorker destructor called
+2025-05-16 05:41:39 - GetWorkerLog function called
+2025-05-16 05:41:39 - ProcessPrompt function called
+2025-05-16 05:41:39 - Creating LlamaWorker with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:41:39 - LlamaWorker constructor called with model: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:41:39 - LlamaWorker queued for execution
+2025-05-16 05:41:39 - Worker thread started execution
+2025-05-16 05:41:39 - Model path: /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:41:39 - Prompt length: 44 characters
+2025-05-16 05:41:39 - Prompt content: give me a name for cat with "tha" at the end
+2025-05-16 05:41:39 - Initializing llama.cpp backend
+2025-05-16 05:41:39 - Step 1: Setting up model parameters
+2025-05-16 05:41:39 - Step 2: Loading model from /Users/temme/Downloads/llama-3.2-1b-instruct-q4_k_m.gguf
+2025-05-16 05:41:40 - GetWorkerLog function called
+2025-05-16 05:41:41 - Model loaded successfully:
+2025-05-16 05:41:41 -   - Parameters: 1235814432
+2025-05-16 05:41:41 -   - Context size: 131072
+2025-05-16 05:41:41 -   - Embedding size: 2048
+2025-05-16 05:41:41 - Step 3: Creating inference context
+2025-05-16 05:41:41 - Context created with 4 threads for computation
+2025-05-16 05:41:41 - Step 5: Tokenizing prompt
+2025-05-16 05:41:41 - Tokenized prompt into 14 tokens
+2025-05-16 05:41:41 - Step 6: Processing prompt tokens
+2025-05-16 05:41:41 - Prompt processing complete - generating response
+2025-05-16 05:41:41 - Step 7: Generating response tokens
+2025-05-16 05:41:41 - Generated token 1/128: '
+'
+2025-05-16 05:41:41 - Generated token 11/128: ' "'
+2025-05-16 05:41:41 - Generated token 16/128: ' end'
+2025-05-16 05:41:41 - Generated token 21/128: 'alia'
+2025-05-16 05:41:41 - Generated token 26/128: 'ane'
+2025-05-16 05:41:41 - GetWorkerLog function called
+2025-05-16 05:41:41 - Generated token 31/128: 'ora'
+2025-05-16 05:41:41 - Generated token 36/128: 'ora'
+2025-05-16 05:41:41 - Generated token 41/128: ' it'
+2025-05-16 05:41:41 - Generated token 46/128: '!)
+'
+2025-05-16 05:41:41 - Generated token 51/128: ' ('
+2025-05-16 05:41:41 - Generated token 56/128: ' it'
+2025-05-16 05:41:41 - Generated token 61/128: ' but'
+2025-05-16 05:41:41 - Generated token 66/128: ' name'
+2025-05-16 05:41:41 - Generated token 71/128: 'Which'
+2025-05-16 05:41:42 - Generated token 76/128: ' best'
+2025-05-16 05:41:42 - Generated token 81/128: ' have'
+2025-05-16 05:41:42 - Generated token 86/128: ' mind'
+2025-05-16 05:41:42 - Generated token 91/128: ' I'
+2025-05-16 05:41:42 - Generated token 101/128: '!)'
+2025-05-16 05:41:42 - Generated EOS token, stopping generation
+2025-05-16 05:41:42 - Step 8: Response generation complete, cleaning up resources
+2025-05-16 05:41:42 - Final response length: 346 characters
+2025-05-16 05:41:42 - Worker processing completed successfully
+2025-05-16 05:41:42 - Worker execution completed
+2025-05-16 05:41:42 - OnOK called - returning result to JavaScript
+2025-05-16 05:41:42 - LlamaWorker destructor called

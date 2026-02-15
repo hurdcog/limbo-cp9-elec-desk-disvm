@@ -1,0 +1,148 @@
+# Llambo Distributed Cognition Cluster Configuration
+
+# Cluster topology
+cluster:
+  name: "llambo-global-cognition"
+  mode: "distributed"
+  
+  # Node configuration
+  nodes:
+    # Tiny inference engines
+    tiny:
+      count: 1000
+      resources:
+        cpu: "0.1 core"
+        memory: "128MB"
+        model: "llama-1b-quantized.gguf"
+        context_size: 512
+        threads: 1
+      
+    # Medium inference engines  
+    medium:
+      count: 100
+      resources:
+        cpu: "1 core"
+        memory: "1GB"
+        model: "llama-7b-quantized.gguf"
+        context_size: 2048
+        threads: 4
+    
+    # Large inference engines
+    large:
+      count: 10
+      resources:
+        cpu: "4 cores"
+        memory: "8GB"
+        model: "llama-13b.gguf"
+        context_size: 4096
+        threads: 8
+
+  # Load balancing
+  load_balancer:
+    strategy: "least-loaded"  # Options: round-robin, least-loaded, random, cognitive-affinity
+    health_check_interval: 1000  # milliseconds
+    max_retries: 3
+    timeout: 30000  # milliseconds
+    
+  # Network topology
+  network:
+    protocol: "styx"  # Inferno native protocol
+    base_port: 9000
+    port_range: 2000
+    discovery: "multicast"
+    heartbeat_interval: 5000  # milliseconds
+    
+  # Orchestration
+  orchestrator:
+    auto_scale: true
+    min_nodes: 100
+    max_nodes: 10000
+    scale_up_threshold: 0.8  # 80% utilization
+    scale_down_threshold: 0.2  # 20% utilization
+    scale_factor: 1.5
+    
+  # Model management
+  models:
+    cache_strategy: "distributed"
+    preload: true
+    shared_vocabulary: true
+    quantization: "int8"
+    
+  # Distributed cognition
+  cognition:
+    mode: "collective"
+    consensus_algorithm: "raft"
+    aggregation_strategy: "weighted-average"
+    min_consensus_nodes: 3
+    cognitive_fusion: true
+    
+  # Monitoring
+  monitoring:
+    enabled: true
+    metrics:
+      - "inference_latency"
+      - "token_throughput"
+      - "node_utilization"
+      - "cluster_capacity"
+      - "cognitive_coherence"
+    export_format: "prometheus"
+    export_port: 9090
+
+# VM instance configuration
+inferno_vm:
+  instances:
+    # Worker instance template
+    worker:
+      memory: "256MB"
+      namespace: "/n/llambo"
+      modules:
+        - "/dis/llambo.dis"
+        - "/dis/sys.dis"
+        - "/dis/draw.dis"
+      mount_points:
+        - src: "/models"
+          dst: "/n/models"
+          flags: "MREPL"
+      environment:
+        LLAMBO_MODE: "worker"
+        LLAMBO_CLUSTER_ID: "{{cluster.name}}"
+        
+    # Orchestrator instance
+    orchestrator:
+      memory: "512MB"
+      namespace: "/n/llambo-orch"
+      modules:
+        - "/dis/llambo.dis"
+        - "/dis/sys.dis"
+        - "/dis/draw.dis"
+      environment:
+        LLAMBO_MODE: "orchestrator"
+        LLAMBO_CLUSTER_ID: "{{cluster.name}}"
+
+# Deployment configuration
+deployment:
+  # Initial bootstrap
+  bootstrap:
+    - "mount -c {mnt} /n/llambo"
+    - "bind /dis /n/llambo/dis"
+    - "bind /models /n/llambo/models"
+    
+  # Node startup sequence
+  startup:
+    - "limbo -o /dis/llambo.dis llambo.b"
+    - "limbo -o /dis/llambotest.dis llambotest.b"
+    - "/dis/llambo.dis &"
+    
+  # Cluster initialization
+  cluster_init:
+    - "llamboctl init --config cluster.yaml"
+    - "llamboctl spawn --count {{cluster.nodes.tiny.count}} --type tiny"
+    - "llamboctl status"
+    
+  # Health checks
+  health:
+    endpoint: "/status"
+    interval: 10
+    timeout: 5
+    healthy_threshold: 2
+    unhealthy_threshold: 3
