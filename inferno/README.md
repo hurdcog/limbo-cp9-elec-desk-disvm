@@ -425,15 +425,67 @@ Global Orchestrator
 
 ISC License (same as parent project)
 
+## FFI Integration (New!)
+
+Llambo now supports **Foreign Function Interface (FFI)** for direct C bindings to llama.cpp,
+enabling native performance instead of pure Limbo simulation.
+
+### FFI Features
+
+- **C Module**: Native llama.cpp bindings compiled as Inferno builtin module
+- **Styx Wrapper**: 9P file server for distributed C library access across VM boundaries
+- **Automatic Fallback**: Pure Limbo mode if FFI unavailable
+- **Build System**: Automated compilation and integration with `build-ffi.sh`
+
+### Quick Start with FFI
+
+```bash
+# Build FFI module
+cd inferno
+./build-ffi.sh build
+
+# Use FFI from Limbo
+include "llambo_c.m";
+    llambo_c: Llambo_c;
+
+llambo_c = load Llambo_c Llambo_c->PATH;
+model_id := llambo_c->load_model("/models/llama-7b.gguf", 1, 0);
+result := llambo_c->infer(model_id, "Hello!", 128, 0.8);
+llambo_c->free_model(model_id);
+```
+
+### Styx File Server (Distributed FFI)
+
+Access C library across Dis VM boundaries:
+
+```bash
+# Start Styx server
+mount {llambo_styx} /n/llambo
+
+# Use from any VM
+echo "load /models/llama-7b.gguf 1 0" > /n/llambo/ctl
+echo "Hello!|128|0.8" > /n/llambo/models/0/data
+cat /n/llambo/models/0/data
+```
+
+### Documentation
+
+- **[BUILD-FFI.md](BUILD-FFI.md)** - Complete build instructions
+- **[FFI-USAGE.md](FFI-USAGE.md)** - Usage guide (auto-generated)
+- **[c-module/README.md](c-module/README.md)** - C module documentation
+- **[llambo_c.m](llambo_c.m)** - Limbo module declaration with FFI functions
+
 ## Contributing
 
 Contributions welcome! Areas of interest:
 
-- FFI bindings to llama.cpp C library
+- ~~FFI bindings to llama.cpp C library~~ ✅ **IMPLEMENTED**
 - Advanced load balancing algorithms
 - Consensus and fusion strategies
 - Performance optimizations
 - Monitoring and telemetry
+- Streaming inference support
+- Advanced sampling methods (top-k, top-p)
 
 ## References
 
