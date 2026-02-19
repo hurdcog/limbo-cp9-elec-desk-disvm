@@ -7,7 +7,7 @@ A dual-mode llama.cpp integration project supporting both desktop (Electron) and
 This project provides two ways to run llama.cpp inference:
 
 1. **Desktop Mode**: An Electron application with Node.js native addon for local, single-user inference
-2. **Distributed Mode**: Pure Limbo implementation for Inferno OS, optimized for distributed cognition across thousands of tiny inference engines in load-balanced clusters
+2. **Distributed Mode**: Limbo implementation for Inferno OS with **native C FFI**, optimized for distributed cognition across thousands of tiny inference engines in load-balanced clusters
 
 ## Features
 
@@ -20,6 +20,8 @@ This project provides two ways to run llama.cpp inference:
 
 ### Distributed Mode (Inferno OS)
 
+- **🆕 Native FFI**: Direct C bindings to llama.cpp for maximum performance
+- **Styx Protocol Wrapper**: Distributed C library access across Dis VM boundaries
 - Deploy thousands of modular isolates as Dis VM instances
 - Load balancing across cluster with multiple strategies
 - Distributed cognition with collective inference capacity
@@ -27,6 +29,7 @@ This project provides two ways to run llama.cpp inference:
 - Aggregate throughput of 10,000+ tokens/sec with 1000+ nodes
 - **Limbot**: AI chat assistant CLI with conversation history
 - **Dish Integration**: Interactive distributed shell for cluster access
+- **Automatic Fallback**: Pure Limbo mode if FFI unavailable
 
 ## Quick Start
 
@@ -100,6 +103,8 @@ For distributed cluster deployment with thousands of tiny inference engines.
 - Inferno OS installed (or Inferno emulator)
 - Limbo compiler
 - llama.cpp compatible models
+- **Optional**: C compiler for FFI (GCC/Clang)
+- **Optional**: CMake for building llama.cpp
 
 ### Installation
 
@@ -109,12 +114,21 @@ For distributed cluster deployment with thousands of tiny inference engines.
    ./deploy.sh check
    ```
 
-2. Compile Limbo modules:
+2. **Build FFI (Optional but Recommended):**
+   ```bash
+   # Build native C bindings for maximum performance
+   ./build-ffi.sh build
+   
+   # Or check dependencies first
+   ./build-ffi.sh check
+   ```
+
+3. Compile Limbo modules:
    ```bash
    ./deploy.sh compile
    ```
 
-3. Deploy to cluster:
+4. Deploy to cluster:
    ```bash
    ./deploy.sh deploy-local   # For local testing
    # or
@@ -296,6 +310,8 @@ This project is licensed under the ISC License - see the LICENSE file for detail
 
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** - Detailed architecture for both modes
 - **[inferno/README.md](inferno/README.md)** - Complete Inferno/Limbo documentation
+- **[inferno/BUILD-FFI.md](inferno/BUILD-FFI.md)** - FFI build instructions
+- **[inferno/FFI-QUICK-REFERENCE.md](inferno/FFI-QUICK-REFERENCE.md)** - FFI quick reference
 - **Desktop Mode**: See above sections
 - **Distributed Mode**: See `inferno/` directory
 
@@ -309,8 +325,10 @@ Contributions are welcome! Areas of interest:
 - Performance optimizations
 
 **Distributed Mode:**
-- FFI bindings to llama.cpp C library
+- ~~FFI bindings to llama.cpp C library~~ ✅ **IMPLEMENTED**
 - Advanced load balancing algorithms
 - Consensus and cognitive fusion strategies
 - Monitoring and telemetry
-- Production deployment tools 
+- Production deployment tools
+- Streaming inference support
+- Advanced sampling methods 

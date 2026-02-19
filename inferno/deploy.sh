@@ -93,6 +93,30 @@ compile_modules() {
         }
     fi
     
+    # Compile FFI Styx wrapper module
+    log_info "  Compiling llambo_styx.b -> llambo_styx.dis"
+    if [ -x "$EMU" ]; then
+        $EMU sh -c "limbo -o /dis/llambo_styx.dis llambo_styx.b" || {
+            log_warn "Failed to compile llambo_styx.b (non-critical)"
+        }
+    fi
+    
+    # Compile FFI example
+    log_info "  Compiling ffi-example.b -> ffi-example.dis"
+    if [ -x "$EMU" ]; then
+        $EMU sh -c "limbo -o /dis/ffi-example.dis ffi-example.b" || {
+            log_warn "Failed to compile ffi-example.b (non-critical)"
+        }
+    fi
+    
+    # Compile FFI test suite
+    log_info "  Compiling test-ffi.b -> test-ffi.dis"
+    if [ -x "$EMU" ]; then
+        $EMU sh -c "limbo -o /dis/test-ffi.dis test-ffi.b" || {
+            log_warn "Failed to compile test-ffi.b (non-critical)"
+        }
+    fi
+    
     log_info "Compilation complete"
 }
 
@@ -113,8 +137,19 @@ deploy_local() {
     cp -v llambotest.b "$DEPLOY_DIR/"
     cp -v dish-integration.b "$DEPLOY_DIR/"
     cp -v limbot.b "$DEPLOY_DIR/"
+    cp -v llambo_c.m "$DEPLOY_DIR/" || true
+    cp -v llambo_styx.b "$DEPLOY_DIR/" || true
+    cp -v ffi-example.b "$DEPLOY_DIR/" || true
+    cp -v test-ffi.b "$DEPLOY_DIR/" || true
     cp -v cluster-config.yaml "$DEPLOY_DIR/"
     cp -v limbot-cli "$DEPLOY_DIR/"
+    
+    # Copy FFI library if built
+    if [ -f "c-module/llambo_c.so" ]; then
+        log_info "  Copying FFI library"
+        mkdir -p "$DEPLOY_DIR/lib"
+        cp -v c-module/llambo_c.so "$DEPLOY_DIR/lib/"
+    fi
     
     # Copy .dis files if they exist
     if [ -f "/dis/llambo.dis" ]; then
@@ -125,6 +160,15 @@ deploy_local() {
     fi
     if [ -f "/dis/limbot.dis" ]; then
         cp -v /dis/limbot.dis "$DEPLOY_DIR/dis/" || true
+    fi
+    if [ -f "/dis/llambo_styx.dis" ]; then
+        cp -v /dis/llambo_styx.dis "$DEPLOY_DIR/dis/" || true
+    fi
+    if [ -f "/dis/ffi-example.dis" ]; then
+        cp -v /dis/ffi-example.dis "$DEPLOY_DIR/dis/" || true
+    fi
+    if [ -f "/dis/test-ffi.dis" ]; then
+        cp -v /dis/test-ffi.dis "$DEPLOY_DIR/dis/" || true
     fi
     
     log_info "Local deployment complete"
@@ -189,6 +233,24 @@ run_tests() {
     fi
 }
 
+# Run FFI tests
+run_ffi_tests() {
+    log_info "Running FFI test suite..."
+    
+    EMU="$INFERNO_ROOT/Linux/386/bin/emu"
+    
+    if [ -x "$EMU" ]; then
+        log_info "Launching FFI tests..."
+        $EMU sh -c "run /dis/test-ffi.dis" || {
+            log_warn "FFI tests failed (expected if FFI not built)"
+            log_info "To build FFI: ./build-ffi.sh build"
+        }
+    else
+        log_error "Cannot run tests: emulator not found"
+        exit 1
+    fi
+}
+
 # Show status
 show_status() {
     log_info "Llambo Cluster Status"
@@ -236,6 +298,9 @@ main() {
         test)
             run_tests
             ;;
+        test-ffi)
+            run_ffi_tests
+            ;;
         status)
             show_status
             ;;
@@ -246,7 +311,7 @@ main() {
             start_orchestrator
             ;;
         *)
-            echo "Usage: $0 {check|compile|deploy-local|deploy-cluster|start|test|status|all}"
+            echo "Usage: $0 {check|compile|deploy-local|deploy-cluster|start|test|test-ffi|status|all}"
             echo ""
             echo "Commands:"
             echo "  check          - Check Inferno OS installation"
@@ -255,6 +320,7 @@ main() {
             echo "  deploy-cluster - Deploy to distributed cluster"
             echo "  start          - Start orchestrator"
             echo "  test           - Run test suite"
+            echo "  test-ffi       - Run FFI test suite"
             echo "  status         - Show cluster status"
             echo "  all            - Run complete deployment"
             echo ""
@@ -262,6 +328,9 @@ main() {
             echo "  INFERNO_ROOT   - Path to Inferno OS installation (default: /usr/inferno)"
             echo "  LLAMBO_ROOT    - Path to Llambo source (default: current directory)"
             echo "  CLUSTER_CONFIG - Path to cluster config (default: cluster-config.yaml)"
+            echo ""
+            echo "FFI Commands:"
+            echo "  See ./build-ffi.sh for FFI-specific build commands"
             exit 1
             ;;
     esac
